@@ -1,0 +1,77 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background-color: gray;
+}
+
+.container{
+    width: 40vh;
+    padding: 2rem;
+    min-height: 35vh;
+    text-align: center;
+    border-radius: 1rem;
+    background-color: white;
+}
+
+form{
+    margin: 2rem 0 1rem 0;
+}
+
+form select, input, button{
+    width: 100%;
+    height: 2.5rem;
+    border: none;
+    outline: none;
+    border-radius: 1rem;
+    padding-left: 0.5rem;
+    border: 1px solid lightgray; 
+}
+
+.drop_down{
+    display: flex;
+    margin-top: 2rem;
+    font-size: 1.25rem;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.select_country img {
+    max-width: 1.75rem;
+}
+
+.select_country {
+    width: 7rem;
+    display: flex;
+    align-items: center;
+    border-radius: 1rem;
+    justify-content: center;
+    border: 1px solid lightgray;
+}
+
+.select_country select {
+    width: auto;
+    border: none;
+    font-size: 1rem;
+}
+
+#result {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+form button {
+    font-size: 1.15rem;
+}
+
+.drop_down i, button, .select_country select:hover {
+    cursor: pointer;
+}
