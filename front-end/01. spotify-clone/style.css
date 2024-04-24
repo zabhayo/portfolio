@@ -1,0 +1,273 @@
+body{
+  font-family: "Montserrat", sans-serif;
+  background-color: black;
+  overflow: hidden;
+  color: white;
+  margin: 0;
+}
+
+.main {
+    display: flex;
+    height: 100vh;
+}
+
+.sidebar {
+    border-radius: 1rem;
+    width: 340px;
+    margin: 0.5rem;
+    height: 87%;
+}
+
+.main_content {
+    background-color: #121212;
+    margin: 10px 10px 10px 0;
+    border-radius: 1rem;
+    overflow: auto;
+    padding: 0 1.5rem;
+    flex: 1;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.nav {
+    background-color: #121212;
+    border-radius: 1rem;
+    height: 8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0.5rem 0.75rem;
+}
+
+.nav-option {
+    line-height: 2.5rem;
+    opacity: 0.7;
+    padding: 0.5rem 0.75rem;
+}
+
+.nav-option:hover {
+    opacity: 1;
+}
+
+.nav-option i {
+    font-size: 1.25rem;
+}
+
+.nav-option a {
+    font-size: 1rem;
+    margin: 1rem;
+}
+
+.library {
+    background-color: #121212;
+    margin-top: 0.75rem;
+    border-radius: 1rem;
+    height: 100%;
+    padding: 0.5rem 0.75rem;
+}
+
+.options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.lib-option img {
+    height: 1.25rem;
+    width: 1.25rem;
+}
+
+.icons {
+    font-size: 1.25rem;
+    
+    display: flex;
+}
+
+.icons i {
+    opacity: 0.7;
+    margin-right: 1rem;
+}
+
+.icons i:hover {
+    opacity: 1;
+}
+
+.box {
+    background-color: #242424;
+    border-radius: 1rem;
+    margin: 0.75rem 0 1rem 0;
+    padding: 1rem 1.25rem;
+    height: 8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.box-p1 {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.box-p2 {
+    font-size: 0.85rem;
+}
+
+.badge {
+    background-color: white;
+    border-radius: 100px;
+    border: none;
+    padding: 0.25rem 1rem;
+    margin-top: 0.5rem;
+    font-weight: 700;
+    height: 2rem;
+    width: fit-content;
+}
+
+.dark-badge {
+    background-color: #000;
+    color: #fff;
+}
+
+.sticky-nav {
+    position: sticky;
+    top: 0;
+    background-color: #121212;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    z-index: 100;
+}
+
+.sticky-nav-icons {
+    margin-left: 0.75rem;
+}
+
+.sticky-nav-options {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 1rem;
+}
+
+.nav-items {
+    margin: 0.5rem;
+}
+
+@media (max-width: 1000px){
+    .hide {
+        display: none;
+    }
+}
+
+.card {
+    background-color: #232323;
+    border-radius: 1rem;
+    width: 175px;
+    padding: 1rem;
+    margin: 1rem;    
+}
+
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card-img {
+    width: 175px;
+    border-radius: 0.5rem ;
+}
+
+.card-title {
+    font-weight: 600;
+}
+
+.card-info {
+    opacity: 0.85;
+    font-size: 0.85rem;
+    line-height: 1.25rem;
+}
+
+.footer {
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.line{
+    width: 90%;
+    height: 50%;
+    opacity: 0.5;
+    border-top: 1px solid white;
+}
+
+.music_player {
+    bottom: 0;
+    height: 95px;
+    width: 100%;
+    display: flex;
+    position: fixed;
+    align-items: center;
+    background-color: black;
+    justify-content: space-between;
+}
+
+.album-left {
+    width: 25%;
+}
+
+.player {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    padding: 0.5rem 1rem;
+    text-align: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+}
+
+.player-controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.player-control-icon {
+    height: 1rem;
+    opacity: 0.7;
+}
+
+.player-control-icon:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.play {
+    height: 2.5rem;
+    opacity: 1;
+}
+
+.progress-bar {
+    width: 100%;
+    display: flex;
+    cursor: pointer;
+}
+
+.progress-bar span {
+    opacity: 0.5;
+    margin: 0.5rem;
+}
+
+
+.controls-right {
+    width: 25%;
+}
+
+
+
