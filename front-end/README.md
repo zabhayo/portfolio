@@ -1,2 +1,2 @@
 # front-end
- this folder includes projects that are based on HTML, CSS(Bootstrap, tailwind) & JavaScript language.
+ files in this folder includes projects based on HTML, CSS(Bootstrap, tailwind) &  Vanilla JavaScript.
