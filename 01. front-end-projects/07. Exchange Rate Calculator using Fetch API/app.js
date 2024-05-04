@@ -1,5 +1,5 @@
-const currencyEl_one = document.getElementById('currency-one'); 
-const currencyEl_two = document.getElementById('currency-two');
+let currencyEl_one = document.getElementById('currency-one'); 
+let currencyEl_two = document.getElementById('currency-two');
 
 const amountEl_one = document.getElementById('amount-one');
 const amountEl_two = document.getElementById('amount-two');
@@ -27,7 +27,14 @@ function calculate() {
 currencyEl_one.addEventListener('change', calculate);
 amountEl_one.addEventListener('input', calculate);
 currencyEl_two.addEventListener('change', calculate);
-amountEl_two.addEventListener('input', calculate)
+amountEl_two.addEventListener('input', calculate);
+
+swap.addEventListener('click', () => {
+    let temp = currencyEl_one.value
+
+    currencyEl_one.value = currencyEl_two.value;
+    currencyEl_two.value = temp;
+    calculate();
+});
 
 calculate();
-
