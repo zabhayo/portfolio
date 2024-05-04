@@ -8,12 +8,6 @@ input[type='range'] {
 	background: transparent; /* Otherwise white in Chrome */
 }
 
-input.wpcf7-form-control.wpcf7-submit {
-	-webkit-appearance: none !important;
-	-moz-appearance:    none;
-	appearance:         none;
- }
-
 input[type='range']::-webkit-slider-thumb {
 	-webkit-appearance: none;
 }
