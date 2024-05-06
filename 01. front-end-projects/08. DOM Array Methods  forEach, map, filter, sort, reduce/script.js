@@ -32,11 +32,13 @@ function doubleMoney() {
 };
 
 function millionairesOnly () {
-    data = data.filter(item => {
-        if (parseFloat(item.money) > 10000) {
-        }
+    data = data.filter(item => { 
+        return item.money > 1000000
     });
-    updateDOM();
+
+    console.log(data);
+
+    updateDOM(data);
 };
 
 function sorting() {
