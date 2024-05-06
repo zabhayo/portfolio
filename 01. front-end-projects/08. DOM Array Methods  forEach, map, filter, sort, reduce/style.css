@@ -54,7 +54,7 @@ h2 {
 
 h3 {
     background-color: white;
-    border-bottom: 1px solid #111;
+    border-top: 1px solid #111;
     padding: 10px;
     display: flex;
     justify-content: space-between;

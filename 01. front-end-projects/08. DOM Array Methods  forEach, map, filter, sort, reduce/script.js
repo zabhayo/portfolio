@@ -9,7 +9,6 @@ let data = [];
 
 getRandomUser();
 getRandomUser();
-getRandomUser();
 
 async function getRandomUser() {
    let response = await fetch('https://randomuser.me/api');
@@ -17,11 +16,16 @@ async function getRandomUser() {
    const user = data.results[0];
 
    const newUser = {
-    name: `${user.name.title} ${user.name.first} ${user.name.last}`,
+    name: `${user.name.first} ${user.name.last}`,
     money: Math.floor(Math.random() * 1000000),
    };
 
    addData(newUser);
+};
+
+function addData(obj) {
+    data.push(obj);
+    updateDOM();
 };
 
 function doubleMoney() {
@@ -32,11 +36,7 @@ function doubleMoney() {
 };
 
 function millionairesOnly () {
-    data = data.filter(item => { 
-        return item.money > 1000000
-    });
-
-    console.log(data);
+    data = data.filter(item => item.money > 1000000);
 
     updateDOM(data);
 };
@@ -47,11 +47,14 @@ function sorting() {
     updateDOM();
 };
 
+function totalWealth() {
+    let wealth = data.reduce((accum, item) => 
+        accum + item.money, 0);
 
-function addData(obj) {
-    data.push(obj);
+    const total = document.createElement("div");
+    total.innerHTML = `<h3>Total Wealth: <strong>${formatMoney(wealth)}</srtong></h3>`;
 
-    updateDOM();
+    main.appendChild(total);
 };
 
 
@@ -77,4 +80,4 @@ addUser.addEventListener('click', getRandomUser);
 double.addEventListener('click', doubleMoney);
 showMillionaires.addEventListener('click', millionairesOnly);
 sort.addEventListener('click', sorting);
-// calculateWealth.addEventListener('click', )
+calculateWealth.addEventListener('click', totalWealth)
