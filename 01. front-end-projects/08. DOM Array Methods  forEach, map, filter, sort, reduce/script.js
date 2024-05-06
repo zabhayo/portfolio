@@ -1,9 +1,9 @@
 const main = document.getElementById('main');
 const addUser = document.getElementById('add-user');
 const double = document.getElementById('double');
-const showmillionaires = document.getElementById('show-millionaires');
+const showMillionaires = document.getElementById('show-millionaires');
 const sort = document.getElementById('sort');
-const calculatewealth = document.getElementById('calculate-wealth');
+const calculateWealth = document.getElementById('calculate-wealth');
 
 let data = [];
 
@@ -20,9 +20,59 @@ async function getRandomUser() {
     name: `${user.name.title} ${user.name.first} ${user.name.last}`,
     money: Math.floor(Math.random() * 1000000),
    };
+
    addData(newUser);
 };
 
+function doubleMoney() {
+    data = data.map((item) => {
+        return {...item, money: item.money * 2}
+    });
+    updateDOM();
+};
+
+function millionairesOnly () {
+    data = data.filter(item => {
+        if (parseFloat(item.money) > 10000) {
+        }
+    });
+    updateDOM();
+};
+
+function sorting() {
+    data = data.sort((a, b) => b.money - a.money);
+
+    updateDOM();
+};
+
+
 function addData(obj) {
     data.push(obj);
+
+    updateDOM();
 };
+
+
+function updateDOM(providedData = data) {
+            
+    main.innerHTML = `<h2><strong>Person</strong>Wealth</h2>`;
+
+    providedData.forEach((item) => {
+        let person = document.createElement("div");
+        person.className = 'person';
+        person.innerHTML = `<strong>${item.name}</strong>${formatMoney(item.money)}`;
+
+        main.appendChild(person)
+    });
+};
+
+function formatMoney(number) {
+    return '$' + (number).toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,');
+};
+
+// Event listeners
+addUser.addEventListener('click', getRandomUser);
+double.addEventListener('click', doubleMoney);
+showMillionaires.addEventListener('click', millionairesOnly);
+sort.addEventListener('click', sorting);
+// calculateWealth.addEventListener('click', )
