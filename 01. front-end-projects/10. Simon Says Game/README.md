@@ -28,7 +28,3 @@ Simon Says is a memory game where players must repeat a sequence of button press
 - HTML5
 - CSS3
 - JavaScript
-
-## Acknowledgements
-
-The design and implementation of this game were inspired by the classic Simon Says game. Special thanks to the creators of the original game for providing the foundation for this project.
