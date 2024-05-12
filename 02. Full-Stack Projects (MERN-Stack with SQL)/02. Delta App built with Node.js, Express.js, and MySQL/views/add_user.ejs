@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add User</title>
+  </head>
+  <body>
+    <h1>Add New User</h1>
+    <form action="/users" method="post">
+      <input type="text" name="username" placeholder="Enter username" />
+      <br /><br />
+      <input type="text" name="email" placeholder="Enter Email" />
+      <br /><br />
+      <input type="password" placeholder="Password" name="password" />
+      <br /><br />
+      <input
+        type="password"
+        placeholder="Confirm Password"
+        name="re_enter_password"
+      />
+      <br /><br />
+      <button type="submit">Add User</button>
+      <!-- <h3 style="display: inline;">/</h3> -->
+      <!-- <button type="submit">Add Rendom User</button> -->
+    </form>
+  </body>
+</html>
